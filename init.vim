@@ -1,3 +1,13 @@
+call plug#begin()
+Plug 'folke/tokyonight.nvim', { 'branch': 'main' }
+Plug 'nanotech/jellybeans.vim'
+Plug 'scrooloose/syntastic'
+Plug 'vim-airline/vim-airline'
+Plug 'scrooloose/nerdcommenter'
+Plug 'valloric/youcompleteme'
+Plug 'tpope/vim-repeat'
+call plug#end()
+
 set mouse=a
 set history=1000
 set wildmenu
@@ -60,7 +70,7 @@ if $COLORTERM == 'gnome-terminal'
 endif
 
 try
-    colorscheme desert
+    colorscheme jellybeans
 catch
 endtry
 
