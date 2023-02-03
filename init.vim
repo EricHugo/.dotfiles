@@ -15,8 +15,12 @@ set novisualbell
 set t_vb=
 set tm=500
 
+set encoding=utf8
+set ffs=unix,dos,mac
+
 filetype plugin on
 filetype indent on
+syntax enable
 
 map <C-j> <C-W>j
 map <C-k> <C-W>k
