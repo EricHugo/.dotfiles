@@ -6,6 +6,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-repeat'
+Plug 'lukas-reineke/indent-blankline.nvim'
 call plug#end()
 
 set mouse=a
