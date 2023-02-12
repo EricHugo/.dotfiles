@@ -19,8 +19,8 @@ font:
 
 window:
   dimensions:
-    columns: 80
-    lines: 60
+    columns: 75
+    lines: 46
   padding:
     x: 6
     y: 6
