@@ -10,3 +10,5 @@ NEWLINE=$'\n'
 
 eval "$(oh-my-posh init zsh --config ~/zsh/theme.omp.json)"
 
+setopt interactivecomments
+
