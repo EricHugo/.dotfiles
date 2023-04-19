@@ -1,0 +1,10 @@
+[Unit]
+Description=Rotates TODO files
+
+[Service]
+Type=simple
+ExecStart=python /home/eric/git/.dotfiles/bin/rotateTODO.py
+User=eric
+
+[Install]
+WantedBy=multi-user.target
