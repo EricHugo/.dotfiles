@@ -7,7 +7,11 @@ Plug 'scrooloose/nerdcommenter'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-repeat'
 Plug 'lukas-reineke/indent-blankline.nvim'
+"Plug '~/git/simplechecklist.vim'
+Plug 'erichugo/simplechecktlist.vim'
 call plug#end()
+
+let g:NERDCreateDefaultMappings = 1
 
 set mouse=a
 set history=1000
@@ -38,6 +42,8 @@ map <C-k> <C-W>k
 map <C-h> <C-W>h
 map <C-l> <C-W>l
 map 0 ^
+map <SPACE> <Nop>
+let mapleader="\<SPACE>"
 
 " Delete trailing white space on save
 fun! CleanExtraSpaces()
@@ -74,8 +80,6 @@ try
     colorscheme jellybeans
 catch
 endtry
-
-set background=dark
 
 " Set extra options when running in GUI mode
 if has("gui_running")
