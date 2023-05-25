@@ -12,7 +12,7 @@ HISTFILESIZE=20000
 shopt -s checkwinsize
 
 case "$TERM" in
-    xterm-color|*-256color) color_prompt=yes;;
+    xterm-color|*-256color|alacritty) color_prompt=yes;;
 esac
 
 if [ "$color_prompt" = yes ]; then
