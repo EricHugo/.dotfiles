@@ -4,12 +4,16 @@ case $- in
       *) return;;
 esac
 
+export EDITOR="vim"
+export CLICOLOR=yes
+
 shopt -s histappend
 HISTSIZE=10000
 HISTFILESIZE=20000
 # check the window size after each command and, if necessary,
 # update the values of LINES and COLUMNS.
 shopt -s checkwinsize
+shopt -s cdspell
 
 case "$TERM" in
     xterm-color|*-256color|alacritty) color_prompt=yes;;
