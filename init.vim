@@ -6,9 +6,10 @@ Plug 'vim-airline/vim-airline'
 Plug 'scrooloose/nerdcommenter'
 Plug 'valloric/youcompleteme'
 Plug 'tpope/vim-repeat'
+Plug 'raivivek/vim-snakemake'
 Plug 'lukas-reineke/indent-blankline.nvim'
-"Plug '~/git/simplechecklist.vim'
-Plug 'erichugo/simplechecktlist.vim'
+Plug '~/git/simplechecklist.vim'
+"Plug 'erichugo/simplechecktlist.vim'
 call plug#end()
 
 let g:NERDCreateDefaultMappings = 1
