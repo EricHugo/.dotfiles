@@ -1,0 +1,10 @@
+[user]
+    name = Eric Hugoson
+    email = eric@hugoson.org
+[merge]
+    conflictstyle = diff3
+[core]
+    editor = vim
+    pager = delta --dark 
+[interactive]
+    diffFilter = delta --color-only --dark 
