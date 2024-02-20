@@ -1,0 +1,10 @@
+[Unit]
+Description=Monitor CPU clock range, CPU/GPU temps, and GPU power draw
+
+[Service]
+type=simple
+ExecStart=cpu-monitor
+User=root
+
+[Install]
+WantedBy=multi-user.target

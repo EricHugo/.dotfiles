@@ -1,0 +1,20 @@
+#!/bin/sh
+
+DIR=/run/crom
+mkdir -p $DIR
+
+while :
+do
+    temp=$(sensors -A | sed -rn 's/.*Package id 0:\s+.([0-9]+).*/\1/p')
+    freqs=$(grep 'cpu MHz' /proc/cpuinfo | cut -d':' -f2 | tr -d ' ' | cut -d'.' -f1) 
+    min_freq=$(echo "$freqs" | sort --numeric-sort | head -1)
+    max_freq=$(echo "$freqs" | sort --numeric-sort -r | head -1)
+    echo "$min_freq-$max_freq $temp" > $DIR/cpu-monitor
+
+    gpu=$(nvidia-smi -q -d POWER,TEMPERATURE)
+    gpu_temp=$(grep 'GPU Current Temp' <<< "$gpu" | cut -d':' -f2 | tr -d ' ' | cut -d'C' -f1)
+    gpu_power=$(grep 'Power Draw' <<< "$gpu" | head -n1 | cut -d':' -f2 | tr -d ' ' | cut -d'.' -f1)
+    echo "$gpu_power $gpu_temp" > $DIR/gpu-monitor
+
+    sleep 1
+done
