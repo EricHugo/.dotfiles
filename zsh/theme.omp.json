@@ -46,7 +46,10 @@
           },
           "style": "powerline",
           "template": " {{ .Path }} ",
-          "type": "path"
+          "type": "path",
+          "properties": {
+            "style": "letter"
+          }
         },
         {
           "background": "#95ffa4",
