@@ -10,6 +10,7 @@ Plug 'raivivek/vim-snakemake'
 Plug 'lukas-reineke/indent-blankline.nvim'
 Plug '~/git/simplechecklist.vim'
 "Plug 'erichugo/simplechecktlist.vim'
+Plug 'github/copilot.vim'
 call plug#end()
 
 let g:NERDCreateDefaultMappings = 1
