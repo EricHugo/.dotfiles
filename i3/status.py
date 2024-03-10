@@ -18,7 +18,7 @@ usage_bar_string = "".join(usage_bar_strings)
 nf = netifaces.gateways()
 gw = nf['default'][netifaces.AF_INET][1]
 
-status = Status(standalone=True)
+status = Status(standalone=True, click_events=True)
 
 # Tue 30 Jul 11:59:46 PM KW31
 # status.register("clock", format = [ ('%a %b %-d %b %X', 'UTC'), ("%a %-d %b %R", "%X") ])
@@ -80,13 +80,17 @@ status.register("cpu_usage_bar",
     format=usage_bar_string,
     bar_type="vertical",
     start_color=green,
-    end_color=red
+    end_color=red,
 )
 
 # Shows pulseaudio default sink volume
 # Note: requires libpulseaudio from PyPI
 status.register("pulseaudio",
     format="{volume} ♪",)
+
+status.register("taskwarrior",
+    format="TASK {next}")
+
 
 status.register("network",
     interface=gw,
