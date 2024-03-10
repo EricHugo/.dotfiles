@@ -178,7 +178,7 @@ exec --no-startup-id "xset r rate 175 25"
 exec --no-startup-id "xcape -e 'Control_L=Escape' -t 200"
 
 bar {
-    status_command python3 ~/projects/status.py
+    status_command python3 ~/git/.dotfiles/i3/status.py
     separator_symbol " / "
     colors {
         background #24272e
