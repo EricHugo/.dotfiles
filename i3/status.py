@@ -18,7 +18,7 @@ usage_bar_string = "".join(usage_bar_strings)
 nf = netifaces.gateways()
 gw = nf['default'][netifaces.AF_INET][1]
 
-status = Status(standalone=True, click_events=True)
+status = Status(standalone=True)
 
 # Tue 30 Jul 11:59:46 PM KW31
 # status.register("clock", format = [ ('%a %b %-d %b %X', 'UTC'), ("%a %-d %b %R", "%X") ])
