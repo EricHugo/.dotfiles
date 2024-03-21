@@ -174,7 +174,7 @@ bindsym $mod+o exec "i3lock -i ~/lockscreen.png -e -f -t"
 bindsym $mod+p exec "pavucontrol"
 exec_always "feh --bg-fill ~/wallpaper.png"
 exec_always "picom -b -i 1.0 --vsync --backend glx"
-exec --no-startup-id "xset r rate 175 25"
+exec --no-startup-id "xset r rate 165 45"
 exec --no-startup-id "xcape -e 'Control_L=Escape' -t 200"
 
 bar {
