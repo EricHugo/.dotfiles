@@ -68,13 +68,13 @@ def cpu_monitor(s):
     clocks = d[0].split('-')
     min_c = int(clocks[0])
     # two spaces as one int in font is about two spaces wide
-    return f'{"  " if min_c < 1000 else ""}{min_c}-{clocks[1]} MHz {d[1]}ºC'
+    return f'{" " if min_c < 1000 else ""}{min_c}-{clocks[1]} MHz {d[1]}ºC'
 
 status.register("file",
         interval=1,
         components={ "cpu": (cpu_monitor, "/run/crom/cpu-monitor"), },
-        format="{cpu}")
-
+        format="{cpu}"
+)
 
 status.register("cpu_usage_bar",
     format=usage_bar_string,
